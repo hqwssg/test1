@@ -1,0 +1,16 @@
+char* StrCpy(char* src) {
+    // 计算源字符串的长度
+    int len = 0;
+    while (src[len] != '\0') {
+        len++;
+    }
+
+    // 分配内存以存储新字符串（包括字符串结尾的'\0'）
+    char* dest = (char*)malloc((len + 1) * sizeof(char));
+
+    // 复制源字符串到新字符串
+    for (int i = 0; i <= len; i++) {
+        dest[i] = src[i];
+    }
+    return dest;
+}
